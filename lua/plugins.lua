@@ -39,5 +39,6 @@ packer.startup(function(use)
   use 'akinsho/nvim-bufferline.lua'
 
   use 'norcalli/nvim-colorizer.lua' -- Colorizer for #colors
+  use 'lewis6991/gitsigns.nvim' -- Gitsigns
 
 end)
