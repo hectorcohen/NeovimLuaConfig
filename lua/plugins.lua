@@ -1,9 +1,5 @@
 local status, packer = pcall(require, "packer")
-
-if (not status) then
-  print("Packer is not installed")
-  return
-end
+if (not status) then return end
 
 vim.cmd [[packadd packer.nvim]]
 
@@ -29,6 +25,8 @@ packer.startup(function(use)
 
   use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via lua
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's build-in LSP client
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
@@ -40,5 +38,6 @@ packer.startup(function(use)
 
   use 'norcalli/nvim-colorizer.lua' -- Colorizer for #colors
   use 'lewis6991/gitsigns.nvim' -- Gitsigns
+  use 'dinhhuy258/git.nvim' -- For git blame & browser
 
 end)
